@@ -1,0 +1,7 @@
+<suite name="Test Suite">
+    <test name="Smoke Tests">
+        <classes>
+            <class name="com.example.tests.SmokeOwnerTest"/>
+        </classes>
+    </test>
+</suite>

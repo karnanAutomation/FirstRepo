@@ -1,0 +1,1146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>chaintest</title>
+    <link href="https://cdn.jsdelivr.net/gh/anshooarora/chaintest/cdn/simple/chaintest-pkg.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style></style>
+</head>
+
+<body data-bs-theme="dark">
+  <nav class="navbar border-bottom">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a class="navbar-brand" href="#">ChainTest</a>
+        <span class="ms-3 fs-6">Commusoft Web Automation</span>
+      </div>
+      <div>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 21m 16s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-03-31 12:38:57 am</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-03-31 01:00:14 am</span>
+      </div>
+      <div>
+          <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
+            <i class="bi bi-pc-display-horizontal"></i></button>
+        <button role="button" id="shortcuts" class="btn btn-outline-primary smaller" title="Shortcuts">
+            <i class="bi bi-info-circle"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="summary" class="container-fluid bg-body-tertiary">
+    <!-- dashboard section -->
+    <div id="dashboard" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="card card-custom" style="height: 175px">
+              <div class="card-header">
+                Suites
+              </div>
+              <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                <div class="chart-view center" style="margin-left: -1rem;">
+                  <canvas id="stats1"></canvas>
+                </div>
+              </div>
+              <div class="card-footer small">
+                <span id="sp1">1</span> Passed,
+                <span id="sf1">0</span> Failed,
+                <span id="ss1">0</span> Skipped
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card card-custom" style="height: 175px">
+              <div class="card-header">
+                Classes
+              </div>
+              <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                <div class="chart-view center" style="margin-left: -1rem;">
+                  <canvas id="stats2"></canvas>
+                </div>
+              </div>
+              <div class="card-footer small">
+                <span id="sp2">1</span> Passed,
+                <span id="sf2">0</span> Failed,
+                <span id="ss2">0</span> Skipped
+              </div>
+            </div>
+          </div>
+            <div class="col-4">
+              <div class="card card-custom" style="height: 175px">
+                <div class="card-header">
+                  Methods
+                </div>
+                <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                  <div class="chart-view center" style="margin-left: -1rem;">
+                    <canvas id="stats3"></canvas>
+                  </div>
+                </div>
+                <div class="card-footer small">
+                  <span id="sp3">71</span> Passed,
+                  <span id="sf3">0</span> Failed,
+                  <span id="ss3">0</span> Skipped
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- /dashboard section -->
+
+    <!-- tag section -->
+    <!-- /tag section -->
+  </div>
+
+  <div class="container-fluid">
+    <div class="border-bottom py-3 mb-5">
+      <div class="container d-flex justify-content-between">
+        <div id="status-filter" aria-label="Filter tests with status">
+          <button type="button" id="passed" class="btn btn-outline-success btn-sm">Passed</button>
+          <button type="button" id="skipped" class="btn btn-outline-warning btn-sm">Skipped</button>
+          <button type="button" id="failed" class="btn btn-outline-danger btn-sm">Failed</button>
+          <button id="clear-filters" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-x-lg me-1"></i>Clear all filters</button>
+        </div>
+        <div>
+          <button type="button" id="summary-toggle" class="btn btn-outline-primary btn-sm">Toggle Summary Section</button>
+        </div>
+      </div>
+    </div>
+      <div class="test-container passed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname passed">Default Suite</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 21m 12s</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-03-31 12:38:59 am</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-03-31 01:00:11 am</span>
+              </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">testcases.smokeOfficestaff</span>
+                      </div>
+                      <div>
+                        <span class="badge text-dark bg-light">21m 2s</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">createCustomer</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">12s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">editCustomer</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">9s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addPreFinalJob</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">25s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addJobFinalComplete</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">20s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addJobWithoutRules</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">19s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addJobNoRulesAdditionalInvoice</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">23s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">acceptEstimate</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">25s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">rejectEstimate</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">20s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">createJobNoRulesWithDiaryEvent</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">22s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addPaymentJob</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">43s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">createWorkAddress</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">9s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">editWorkAddress</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">7s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">waAddJobPreFinal</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">15s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">waAddPaymentJob</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">40s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">waEstimateAccept</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">24s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addInvoice</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">23s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">editInvoiceNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">deleteInvoiceNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addingAdditionalInvoiceNoBreakdown</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">18s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addingAdditionalInvoiceBreakdownByCategory</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">27s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addingInterimInvoiceFullBreakdown</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">27s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addingPrefinalInvoiceFullBreakdownByCategory</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">23s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addingFinalInvoiceFullBreakdownByCategory</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">23s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">minusDepositRetInterimOnFinal</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">46s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">searchInvoice</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">26s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">estimateDiary</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">18s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">jobDiary</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">18s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">normalDiary</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">13s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">jobFromDiarywithCustomer</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">19s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">diaryUtility</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">23s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">createSupplierNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">3s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">supplierPO</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">15s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">supplierInvoice</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1m 1s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">createCustomerContact</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">10s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">customerReportsNotAvaiable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">2s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">serviceReminderReports</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">7s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">supplierReportsNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">2s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">estimateReports</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">36s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">jobReports</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">19s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">workAddressReportsNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">2s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">customersReportPrintNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">2s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">jobsReportPrint</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">44s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">timeSheetReportNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">2s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">changeInvoiceTypeNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">22s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">serviceReminder</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">20s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">getInvoiceNumberAPI</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">8s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">solarSearchPageResponse</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">7s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">estimateAcceptedInPortal</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">26s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">additionalWorkwithInvoice</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">34s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">diaryViews</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">10s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">jobCostAddLabourNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">231ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">jobCostAddTravelNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">jobCostAddPO</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">11s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">emailCheckBox</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">22s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">serviceJobandInvoice</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">32s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">checkMapLoading</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">8s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">verifyLiveAPILoading</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">11s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">serviceJobfromEdit</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">12s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">additionalInvoiceConvert</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">19s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">interimInvoiceConvert</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">18s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">prefinalInvoiceConvert</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">19s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">finalInvoiceConvert</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">19s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">TRIAG_4027</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">31s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">afterSalesCareInvoiceEmailCheck</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">26s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">afterSalesCareFocEmailCheck</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">15s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">consolidatedInvoiceNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">createCompany</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">8s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">editCompany</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">5s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">deleteCompany</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">10s</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">addJobModifyFinalInvoiceNotAvailable</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">1ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">createLandLordFromWA</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">10s</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          <div class="border-bottom py-5"></div>
+      </div>
+  </div>
+
+  <script>
+    const stats1Annotation = {'total': 1, 'passed': 1};
+    const stats1 = [
+      { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+      { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+      { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+    ];
+      const stats2Annotation = {'total': 1, 'passed': 1};
+      const stats2 = [
+        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+        { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+      ];
+      const stats3Annotation = {'total': 71, 'passed': 71};
+      const stats3 = [
+        { result: 'Passed', count: 71, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+        { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+      ];
+     
+  </script>
+    <script src="https://cdn.jsdelivr.net/gh/anshooarora/chaintest@44756c2b27c4da9d1141ae2de0fc3dda852f17a1/cdn/simple/version/chaintest-pkg.js"></script>
+
+    <div id="sys-info-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title">System</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              onclick="toggleSysInfo(false)"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tbody>
+                  <tr>
+                    <td>java.version</td>
+                    <td>21.0.1</td>
+                  </tr>
+                  <tr>
+                    <td>java.vm.name</td>
+                    <td>Java HotSpot(TM) 64-Bit Server VM</td>
+                  </tr>
+                  <tr>
+                    <td>java.vm.vendor</td>
+                    <td>Oracle Corporation</td>
+                  </tr>
+                  <tr>
+                    <td>java.class.version</td>
+                    <td>65.0</td>
+                  </tr>
+                  <tr>
+                    <td>java.runtime.name</td>
+                    <td>Java(TM) SE Runtime Environment</td>
+                  </tr>
+                  <tr>
+                    <td>os.name</td>
+                    <td>Mac OS X</td>
+                  </tr>
+                  <tr>
+                    <td>os.arch</td>
+                    <td>aarch64</td>
+                  </tr>
+                  <tr>
+                    <td>os.version</td>
+                    <td>13.5</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              onclick="toggleSysInfo(false)">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div id="info-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">ChainTest Simple Generator - Shortcuts</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="toggleInfoModal(false)"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <tbody>
+                <tr>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>Toggle theme (light/dark)</td>
+                </tr>
+                <tr>
+                  <td>s</td>
+                  <td>Toggle skipped tests</td>
+                </tr>
+                <tr>
+                  <td>p</td>
+                  <td>Toggle passed tests</td>
+                </tr>
+                <tr>
+                  <td>f</td>
+                  <td>Toggle failed tests</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="toggleInfoModal(false)">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="attachment-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Attachment</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="toggleAttachmentModal(false)"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="toggleAttachmentModal(false)">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+$ = name
+# = Id
+. = unique single class
+~ = cssSelector
